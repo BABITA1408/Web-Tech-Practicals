@@ -1,0 +1,82 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+	<title>Simple Calculator</title> 
+	<script language="javascript" type="text/javascript">  
+		  
+		function addition(){  
+			a=Number(document.calculator.number1.value);  
+			b=Number(document.calculator.number2.value);  
+			c=a+b;  
+			document.calculator.total.value=c;  
+		} 
+
+		function subtraction(){  
+			a=Number(document.calculator.number1.value);  
+			b=Number(document.calculator.number2.value);  
+			c=a-b;  
+			document.calculator.total.value=c;  
+		}  
+		
+		function multiply(){  
+			a=Number(document.getElementById('num1').value);  
+			b=Number(document.getElementById('num2').value);  
+			c=a*b;  
+			document.calculator.total.value=c;  
+		}
+
+		function division(){  
+			a=Number(document.calculator.number1.value);  
+			b=Number(document.calculator.number2.value);  
+			c=a/b;  
+			document.calculator.total.value=c;  
+		}  
+
+		function modulus(){  
+			a=Number(document.calculator.number1.value);  
+			b=Number(document.calculator.number2.value);  
+			c=a%b;  
+			document.calculator.total.value=c;  
+		}  
+		
+		function reset(){  
+			document.calculator.number1.value = "";  
+			document.calculator.number2.value = "";
+			document.calculator.total.value = "";  
+		}
+	</script>  
+  </head> 
+  <body> 
+	<br><br><br><br>
+	<form name="calculator">
+		<table align="center" cellspacing="10" cellpadding="2" border="0">
+		  <tr>
+			<td align="center" colspan="2"><b>Simple Calculator</b></td>
+		  </tr>
+		  <tr>
+			<td align="left"><Label for="num1">Number 1:</Label></td>
+			<td><input type="number" id="num1" name="number1" maxlength="9"/></td>
+		  </tr>
+		  <tr>
+			<td align="left"><Label for="num2">Number 2:</Label></td>
+			<td><input type="number" id="num2" name="number2" maxlength="9"/></td>
+		  </tr>
+		  <tr>
+			<td align="left">Result: </td>
+			<td><input type="number" name="total" readonly/></td>
+		  </tr>
+		  <tr>
+		   <td align="right" colspan="2">
+			  <input type="button" value="CLEAR" onclick="reset();"/>
+			  <input type="button" value="ADD" onclick="addition();"/>  
+			  <input type="button" value="SUB" onclick="subtraction();"/>  
+			  <input type="button" value="MUL" onclick="multiply();"/>  
+			  <input type="button" value="DIV" onclick="division();"/>  
+			  <input type="button" value="MOD" onclick="modulus();"/>			   
+		   </td>
+		  </tr> 
+		</table>
+	</form>  
+  </body>  
+</html>

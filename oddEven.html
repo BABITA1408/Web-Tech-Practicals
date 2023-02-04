@@ -1,0 +1,46 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+	<title>Check OddEven</title> 
+	<script language="javascript" type="text/javascript">  
+		  
+		function oddEven(){  
+			a=Number(document.odEv.number1.value);  
+			if(a % 2 == 0) {
+				document.getElementById("total").innerHTML= a+' is an even number.';
+			} else {
+				document.getElementById("total").innerHTML= a + ' is an odd number.';
+			} 
+		}
+		function reset(){  
+			document.odEv.number1.value = "";
+			document.getElementById("total").innerHTML = "";  
+		}
+	</script>  
+  </head> 
+  <body> 
+	<br><br><br><br>
+	<form name="odEv">
+		<table align="center" cellspacing="10" cellpadding="2" border="0">
+		  <tr>
+			<td align="center" colspan="2"><b>Check Odd or Even</b></td>
+		  </tr>
+		  <tr>
+			<td align="left"><Label for="num1">Number:</Label></td>
+			<td><input type="number" id="num1" name="number1" maxlength="9"/></td>
+		  </tr>
+		  <tr>
+		   <td align="right" colspan="2">
+			  <input type="button" value="CLEAR" onclick="reset();"/>
+			  <input type="button" value="CHECK" onclick="oddEven();"/>			   
+		   </td>
+		  </tr> 
+		  <tr>
+			<td align="left">Result: </td>
+			<td><b><span id="total"></span></b></td>
+		  </tr>
+		</table>
+	</form>  
+  </body>  
+</html>
